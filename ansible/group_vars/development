@@ -6,14 +6,14 @@ web_user: vagrant
 wordpress_sites:
   tailsup.org.au:
     site_hosts:
-      - example.dev
+      - tailsup.dev
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:roots/bedrock.git
     site_install: true
-    site_title: Example Site
+    site_title: Tails Up
     admin_user: admin
     admin_password: admin
-    admin_email: admin@example.dev
+    admin_email: admin@tailsup.dev
     multisite:
       enabled: false
       subdomains: false
@@ -24,16 +24,16 @@ wordpress_sites:
       duration: 30s
     system_cron: true
     env:
-      wp_home: http://example.dev
-      wp_siteurl: http://example.dev/wp
+      wp_home: http://tailsup.dev
+      wp_siteurl: http://tailsup.dev/wp
       wp_env: development
-      db_name: example_dev
-      db_user: example_dbuser
-      db_password: example_dbpassword
+      db_name: tailsup_dev
+      db_user: tailsup_dbuser
+      db_password: tailsup_dbpassword
 
 mail_smtp_server: localhost:1025
-mail_admin: admin@example.dev
-mail_hostname: example.dev
+mail_admin: admin@tailsup.dev
+mail_hostname: tailsup.dev
 ssmtp_auth_method: ""
 ssmtp_start_tls: 'no'
 ssmtp_tls: 'no'

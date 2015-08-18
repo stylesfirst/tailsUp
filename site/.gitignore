@@ -26,6 +26,7 @@ sql-dump-*.sql
 # Vendor (e.g. Composer)
 vendor/*
 !vendor/.gitkeep
+composer.phar
 
 # Node Package Manager
 node_modules

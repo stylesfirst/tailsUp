@@ -1,0 +1,12 @@
+.header{
+  text-align: center;
+  &__organisation-name{
+    margin-top: 200px;
+  }
+  &__organisation-tagline{
+    margin-bottom: 200px;
+  }
+  &__page-heading{
+    margin: 80px 0 120px 0;
+  }
+}

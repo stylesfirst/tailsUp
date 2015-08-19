@@ -2,7 +2,7 @@
   padding: 120px 0;
   text-align: center;
   color: #ffffff;
-  background: $brand-primary;
+  background: url(../images/tailsup-icon-dark.png) repeat scroll 0 0 $brand-primary;
   &__heading{
     text-transform: uppercase;
   }
@@ -16,6 +16,16 @@
   text-align: center;
   &__heading{
     color: $brand-primary;
+    text-transform: uppercase;
+  }
+}
+.how-to{
+  background: url(../images/cocker-bg.jpg) no-repeat scroll center center transparent;
+  background-size: cover;
+  color: #ffffff;
+  text-align: center;
+  padding: 120px 0;
+  &__heading{
     text-transform: uppercase;
   }
 }

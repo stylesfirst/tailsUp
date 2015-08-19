@@ -1,7 +1,17 @@
 .header{
-  text-align: center;
+  background: url(../images/header-bg.jpg) no-repeat scroll center center transparent;
+  background-size: cover;
+  &__logo{
+    width: 200px;
+    margin-top: 40px;
+  }
+  &__heading-group{
+    text-align: center;
+    color: #ffffff;
+  }
   &__organisation-name{
     margin-top: 200px;
+    text-transform: uppercase;
   }
   &__organisation-tagline{
     margin-bottom: 200px;

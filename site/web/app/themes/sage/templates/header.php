@@ -1,7 +1,11 @@
 <?php use Roots\Sage\Titles; ?>
 
-<header class="banner header" role="banner">
-    <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+<header class="banner header clearfix" role="banner">
+    <div class="container">
+        <a class="brand" href="<?= esc_url(home_url('/')); ?>">
+            <img class="header__logo" src="<?= get_template_directory_uri(); ?>/dist/images/tailsup-logo.png">
+        </a>
+    </div>
     <div class="header__heading-group">
         <?php
         if (is_front_page()) : ?>

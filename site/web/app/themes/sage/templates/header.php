@@ -10,7 +10,7 @@
         <?php
         if (is_front_page()) : ?>
             <h1 class="header__organisation-name">Organisation name to go here</h1>
-            <p class="header__organisation-tagline">Organisation name to go here</p>
+            <p class="header__organisation-tagline">Organisation tagline to go here</p>
         <?php
         else : ?>
             <h1 class="header__page-heading"><?= Titles\title(); ?></h1>

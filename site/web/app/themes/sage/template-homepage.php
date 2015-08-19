@@ -19,6 +19,22 @@
 </div>
 <div class="how-to">
     <h2 class="how-to__heading">Adopting is easy, but the commitment is forever</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="how-to__dog" src="<?= get_template_directory_uri(); ?>/dist/images/tailsup-dog.png">
+                <p>Find your match</p>
+            </div>
+            <div class="col-md-4">
+                <img class="how-to__apply" src="<?= get_template_directory_uri(); ?>/dist/images/tailsup-apply.png">
+                <p>Apply online</p>
+            </div>
+            <div class="col-md-4">
+                <img class="how-to__love" src="<?= get_template_directory_uri(); ?>/dist/images/tailsup-love.png">
+                <p>Meet and fall in love</p>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="process">
     <h2 class="process__heading">How the review process works</h2>

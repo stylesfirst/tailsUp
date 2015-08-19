@@ -3,3 +3,23 @@
   color: #ffffff;
   padding: 90px 0 150px 0;
 }
+.about-organisation{
+  &__heading{
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &__text{
+    font-size: 20px;
+  }
+}
+.recruit{
+  &__heading{
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &__text{
+    font-size: 20px;
+  }
+}

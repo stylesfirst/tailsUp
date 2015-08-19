@@ -4,6 +4,7 @@
   color: #ffffff;
   background: url(../images/tailsup-icon-dark.png) repeat scroll 0 0 $brand-primary;
   &__heading{
+    font-size: 36px;
     text-transform: uppercase;
   }
   &__text{
@@ -15,6 +16,7 @@
 .adopt{
   text-align: center;
   &__heading{
+    font-size: 36px;
     color: $brand-primary;
     text-transform: uppercase;
   }
@@ -26,13 +28,21 @@
   text-align: center;
   padding: 120px 0;
   &__heading{
+    font-size: 36px;
     text-transform: uppercase;
+    margin-bottom: 80px;
+  }
+  &__dog,
+  &__apply,
+  &__love{
+    margin-bottom: 30px;
   }
 }
 .process{
   padding: 120px 0;
   text-align: center;
   &__heading{
+    font-size: 36px;
     color: $brand-primary;
     text-transform: uppercase;
     max-width: 800px;

@@ -31,3 +31,9 @@ function excerpt_more() {
   return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+
+function wc_remove_all_quantity_fields( $return, $product ) {
+  return true;
+}
+add_filter( 'woocommerce_is_sold_individually', 'wc_remove_all_quantity_fields', 10, 2 );

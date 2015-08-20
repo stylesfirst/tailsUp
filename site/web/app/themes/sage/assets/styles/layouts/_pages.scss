@@ -15,6 +15,7 @@
 }
 .adopt{
   text-align: center;
+  padding: 20px 0 80px 0;
   &__heading{
     font-size: 36px;
     color: $brand-primary;
@@ -53,5 +54,106 @@
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+.dog-item{
+  border-left: 1px solid #a8b5bc;
+  border-top: 1px solid #a8b5bc;
+  border-bottom: 1px solid #a8b5bc;
+  padding: 40px;
+  position: relative;
+  &:hover{
+    border: 2px solid $brand-primary;
+  }
+  &__image img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+  }
+  &__heading{
+    text-transform: uppercase;
+    font-size: 24px;
+    color: $brand-primary;
+    margin-bottom: 5px;
+  }
+  &__short-description{
+    font-size: 16px;
+    line-height: 24px;
+    p{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &__stats{
+    text-transform: uppercase;
+  }
+  &__state{
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  &__link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+  }
+}
+.dog-detail{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  &__image{
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 50%;
+  }
+  .product_title{
+    margin-bottom: 10px;
+  }
+  .shop_attributes{
+    th{
+      text-transform: capitalize;
+      padding-right: 10px;
+    }
+    td{
+      padding-right: 10px;
+      p{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.dog-blocks{
+  margin-top: 60px;
+  h2{
+    margin-bottom: 10px;
+  }
+}
+.checkout-form{
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+  .input-text{
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px;
+    border: 2px solid #a8b5bc;
+    padding: 5px 10px;
+    width: 100%;
+  }
+  .form-row{
+    margin-bottom: 40px;
   }
 }

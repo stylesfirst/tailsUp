@@ -28,3 +28,48 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+
+//Remove quantity field
+function wc_remove_all_quantity_fields( $return, $product ) {
+  return true;
+}
+add_filter( 'woocommerce_is_sold_individually', 'wc_remove_all_quantity_fields', 10, 2 );
+
+//Remove reviews tab
+add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
+function wcs_woo_remove_reviews_tab($tabs) {
+  unset($tabs['reviews']);
+  return $tabs;
+}
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
+//Change add to cart text
+function woo_custom_cart_button_text() {
+  return __( 'Apply to adopt', 'woocommerce' );
+}
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' );    // 2.1 +
+
+add_filter( 'woocommerce_order_button_text', create_function( '', 'return "Submit application";' ) );
+
+//Skip cart review page
+function wc_redirect_to_checkout() {
+  $checkout_url = WC()->cart->get_checkout_url();
+
+  return $checkout_url;
+}
+add_filter( 'woocommerce_add_to_cart_redirect', 'wc_redirect_to_checkout' );
+
+//Customise the checkout page
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+
+// Our hooked in function - $fields is passed via the filter!
+function custom_override_checkout_fields( $fields ) {
+  $fields['billing']['billing_first_name']['label'] = 'Name';
+  unset($fields['billing']['billing_last_name']);
+  unset($fields['billing']['billing_company']);
+  unset($fields['billing']['billing_country']);
+  unset($fields['order']['order_comments']);
+
+  return $fields;
+}

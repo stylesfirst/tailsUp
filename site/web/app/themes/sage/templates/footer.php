@@ -16,7 +16,10 @@
             <div class="about-organisation">
                 <h2 class="about-organisation__heading">Organisation name</h2>
                 <p class="about-organisation__text">
-                    Short description about the organisation
+                    Short description about the organisation.
+                </p>
+                <p class="recruit__text">
+                  This should be kept to two sentences or short paragraphs.
                 </p>
             </div>
         </div>

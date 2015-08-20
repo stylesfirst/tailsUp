@@ -15,7 +15,7 @@
 </div>
 <div class="adopt">
     <h2 class="adopt__heading">Available for adoption</h2>
-    ** woocommerce loop to go here **
+  <?php echo do_shortcode('[products orderby="date" order="desc"]'); ?>
 </div>
 <div class="how-to">
     <h2 class="how-to__heading">Adopting is easy, but the commitment is forever</h2>

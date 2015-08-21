@@ -1,13 +1,34 @@
-mysql_root_password: productionpw
+mysql_root_password: JJQvV8rVkgmcSSEXbv3d
+
+github_ssh_keys:
+  - username: stylesfirst
+    authorized:
+      - "{{ web_user }}"
+  - username: stylesfirst
+    authorized:
+      - "{{ web_user }}"
+
+project_pre_build_commands_local:
+   - path: "{{ project.local_path }}/web/app/themes/sage"
+     cmd: npm install
+   - path: "{{ project.local_path }}/web/app/themes/sage"
+     cmd: bower install
+   - path: "{{ project.local_path }}/web/app/themes/sage"
+     cmd: gulp --production
+
+project_local_files:
+  - name: compiled theme assets
+    src: "{{ project.local_path }}/web/app/themes/sage/dist"
+    dest: web/app/themes/sage
 
 wordpress_sites:
-  example.com:
+  tailsup.org.au:
     site_hosts:
-      - example.com
+      - tailsup.org.au
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@github.com:roots/bedrock.git
+    repo: git@github.com:stylesfirst/tailsUp.git
     branch: master
-    # subtree: site # Use this if following the roots-example-project structure
+    subtree: site # Use this if following the roots-example-project structure
     multisite:
       enabled: false
       subdomains: false
@@ -19,11 +40,11 @@ wordpress_sites:
     system_cron: true
     env:
       wp_home: http://tailsup.org.au
-      wp_siteurl: http://example.com/wp
+      wp_siteurl: http://tailsup.org.au/wp
       wp_env: production
       db_name: tailsup_prod
       db_user: tailsup_dbuser
-      db_password: example_dbpassword
+      db_password: xQC7H9FjKXmSwtbYfCmG
       # Generate your keys here: https://api.wordpress.org/secret-key/1.1/salt/
       auth_key: "V4(1^;WcWj$FK:8*rj*C(}Hk|n%rT04;2(!j@H,+vjRn>.-ly~;~f zo=q,7..=/"
       auth_salt: "%Ei|#I-F$HCh<a8rJQbtZ8te3X@&4OAfdKml4QFqyf(mq<6Sa7.=4ae{y{%sCclN"

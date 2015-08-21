@@ -20,4 +20,13 @@
   &__page-heading{
     margin: 80px 0 120px 0;
   }
+  &__finish-message{
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    z-index: 999999;
+  }
 }

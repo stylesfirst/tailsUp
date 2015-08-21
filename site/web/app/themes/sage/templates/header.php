@@ -1,6 +1,16 @@
 <?php use Roots\Sage\Titles; ?>
 
 <header class="banner header clearfix" role="banner">
+  <?php
+  if ( sizeof( WC()->cart->cart_contents) > 0 && !is_checkout() ) : ?>
+    <div class="header__finish-message">
+      It looks like you're applying for <?php echo sprintf (_n( '%d dog.', '%d dogs.', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ); ?>
+      <a class="header__apply-link" href="<?php echo WC()->cart->get_checkout_url(); ?>" title="<?php _e( 'Submit your application' ); ?>">
+        Finish your application here
+      </a>
+    </div>
+  <?php endif ?>
+
     <div class="container">
         <a class="brand" href="<?= esc_url(home_url('/')); ?>">
             <img class="header__logo" src="<?= get_template_directory_uri(); ?>/dist/images/tailsup-logo.png">
@@ -9,8 +19,8 @@
     <div class="header__heading-group">
         <?php
         if (is_front_page()) : ?>
-            <h1 class="header__organisation-name">Organisation name to go here</h1>
-            <p class="header__organisation-tagline">Organisation tagline to go here</p>
+            <h1 class="header__organisation-name">English Cocker Spaniels Australia</h1>
+            <p class="header__organisation-tagline">Educate. Advocate. Rescue</p>
         <?php
         else : ?>
             <h1 class="header__page-heading"><?= Titles\title(); ?></h1>

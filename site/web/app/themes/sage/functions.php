@@ -73,3 +73,20 @@ function custom_override_checkout_fields( $fields ) {
 
   return $fields;
 }
+
+function bd_rrp_price_html( $price, $product ) {
+  $return_string = 'Adoption Fee: ' . $price;
+  return $return_string;
+}
+add_filter( 'woocommerce_get_price_html', 'bd_rrp_price_html', 100, 2 );
+
+add_filter( 'wc_add_to_cart_message', 'custom_add_to_cart_message' );
+function custom_add_to_cart_message() {
+  if ( get_option( 'woocommerce_cart_redirect_after_add' ) == 'yes' ) :
+    $return_to  = apply_filters( 'woocommerce_continue_shopping_redirect', wp_get_referer() ? wp_get_referer() : home_url() );
+    $message    = sprintf('<a href="%s" class="button wc-forward">%s</a>', $return_to, __( 'Continue Shopping', 'woocommerce' ) );
+  else :
+    $message = '';
+  endif;
+  return $message;
+}

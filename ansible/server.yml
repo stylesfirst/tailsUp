@@ -7,7 +7,7 @@
 
 - name: WordPress Server - Install LEMP Stack with PHP 5.6 and MariaDB MySQL
   hosts: web
-  sudo: yes
+  sudo: no
   vars_files:
     - vars/sudoer_passwords.yml
   roles:

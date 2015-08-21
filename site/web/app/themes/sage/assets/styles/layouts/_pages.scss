@@ -81,10 +81,12 @@
   &__short-description{
     font-size: 16px;
     line-height: 24px;
+    height: 24px;
+    overflow: hidden;
     p{
       white-space: nowrap;
-      overflow: hidden;
       text-overflow: ellipsis;
+      overflow: hidden;
     }
   }
   &__stats{
@@ -156,4 +158,23 @@
   .form-row{
     margin-bottom: 40px;
   }
+  .cart_item{
+    margin-bottom: 40px;
+    img{
+      border-radius: 50%;
+    }
+  }
+}
+.payment_methods{
+  display: none;
+}
+.page-header{
+  h1{
+    text-align: center;
+  }
+}
+.woocommerce-error{
+  text-align: center;
+  padding: 20px 0;
+  list-style: none;
 }

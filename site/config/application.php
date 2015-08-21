@@ -67,6 +67,7 @@ define('DISABLE_WP_CRON', true);
 define('DISALLOW_FILE_EDIT', true);
 define('WP_DEFAULT_THEME', 'sage');
 
+
 /**
  * Bootstrap WordPress
  */

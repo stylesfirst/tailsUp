@@ -46,7 +46,7 @@ $woocommerce_loop['loop']++;
         </span>
       <?php } ?>
       <?php if($dogAge = $product->get_attribute('age')){ ?>
-        <span class="dog-item__gender">
+        <span class="dog-item__age">
           <?php echo $dogAge; ?> years old
         </span>
       <?php } ?>

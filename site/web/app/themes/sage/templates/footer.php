@@ -8,18 +8,18 @@
                     Tails up adoption software is open source and maintained by volunteers.
                 </p>
                 <p class="recruit__text">
-                    This is an example site. If you would like to use it for your organisation, please get in touch.
+                    This is an example site. It's almost ready to be used by animal rescue organisations. If you would like to use it, please stay tuned.
                 </p>
             </div>
         </div>
         <div class="col-md-6">
             <div class="about-organisation">
-                <h2 class="about-organisation__heading">ECSA inc.</h2>
+                <h2 class="about-organisation__heading">Organisation name here</h2>
                 <p class="about-organisation__text">
-                  ECSA Inc. is a breed specific, foster based, no kill rescue group.
+                  Short description to describe your organisation should go here.
                 </p>
                 <p class="recruit__text">
-                  We take in Cocker Spaniels that find themselves in need and place them in foster homes to be cared for until they are adopted.
+                  It's recommended to keep this to two short paragraphs.
                 </p>
             </div>
         </div>

@@ -19,8 +19,8 @@
     <div class="header__heading-group">
         <?php
         if (is_front_page()) : ?>
-            <h1 class="header__organisation-name">English Cocker Spaniels Australia</h1>
-            <p class="header__organisation-tagline">Educate. Advocate. Rescue</p>
+            <h1 class="header__organisation-name">Organisation name here</h1>
+            <p class="header__organisation-tagline">Organisation tagline here</p>
         <?php
         else : ?>
             <h1 class="header__page-heading"><?= Titles\title(); ?></h1>

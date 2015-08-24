@@ -1,7 +1,10 @@
 .footer{
   background: #458ab6;
   color: #ffffff;
-  padding: 90px 0 150px 0;
+  padding: 60px 0 100px 0;
+  @media(min-width: 767px){
+    padding: 90px 0 150px 0;
+  }
 }
 .about-organisation{
   &__heading{

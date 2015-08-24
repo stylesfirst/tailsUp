@@ -90,3 +90,12 @@ function custom_add_to_cart_message() {
   endif;
   return $message;
 }
+
+// check for empty-cart get param to clear the cart
+add_action( 'init', 'woocommerce_clear_cart_url' );
+function woocommerce_clear_cart_url() {
+
+  if ( isset( $_GET['empty-cart'] ) ) {
+    WC()->cart->empty_cart();
+  }
+}

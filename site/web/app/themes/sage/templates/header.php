@@ -6,7 +6,10 @@
     <div class="header__finish-message">
       It looks like you're applying for <?php echo sprintf (_n( '%d dog.', '%d dogs.', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ); ?>
       <a class="header__apply-link" href="<?php echo WC()->cart->get_checkout_url(); ?>" title="<?php _e( 'Submit your application' ); ?>">
-        Finish your application here
+        Finish your application
+      </a> or
+      <a class="header__cancel-link" href="?empty-cart" title="<?php _e( 'Submit your application' ); ?>">
+        Cancel
       </a>
     </div>
   <?php endif ?>

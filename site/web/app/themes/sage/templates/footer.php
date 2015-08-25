@@ -14,12 +14,11 @@
         </div>
         <div class="col-md-6">
             <div class="about-organisation">
-                <h2 class="about-organisation__heading">Organisation name here</h2>
+                <h2 class="about-organisation__heading">
+                  <?php echo get_theme_mod( 'name_textbox', 'Organisation name goes here' ); ?>
+                </h2>
                 <p class="about-organisation__text">
-                  Short description to describe your organisation should go here.
-                </p>
-                <p class="recruit__text">
-                  It's recommended to keep this to two short paragraphs.
+                  <?php echo get_theme_mod( 'bio_textarea', 'Organisation bio goes here' ); ?>
                 </p>
             </div>
         </div>

@@ -99,3 +99,67 @@ function woocommerce_clear_cart_url() {
     WC()->cart->empty_cart();
   }
 }
+
+/**
+ * Adds the individual sections, settings, and controls to the theme customizer
+ */
+function organisation_customizer( $wp_customize ) {
+  $wp_customize->add_section(
+    'organisation_details',
+    array(
+      'title' => 'Organisation details',
+      'description' => 'Information about your organisation.',
+      'priority' => 10,
+    )
+  );
+  $wp_customize->add_setting(
+    'name_textbox',
+    array(
+      'default' => 'Organisation name',
+      'sanitize_callback' => 'sanitize_text',
+    )
+  );
+  $wp_customize->add_control(
+    'name_textbox',
+    array(
+      'label' => 'Organisation Name',
+      'section' => 'organisation_details',
+      'type' => 'text',
+    )
+  );
+  $wp_customize->add_setting(
+    'tagline_textbox',
+    array(
+      'default' => 'Organisation tagline',
+      'sanitize_callback' => 'sanitize_text',
+    )
+  );
+  $wp_customize->add_control(
+    'tagline_textbox',
+    array(
+      'label' => 'Organisation Tagline',
+      'section' => 'organisation_details',
+      'type' => 'text',
+    )
+  );
+  $wp_customize->add_setting(
+    'bio_textarea',
+    array(
+      'default' => 'Organisation bio',
+      'sanitize_callback' => 'sanitize_text',
+    )
+  );
+  $wp_customize->add_control(
+    'bio_textarea',
+    array(
+      'label' => 'Organisation Bio',
+      'section' => 'organisation_details',
+      'type' => 'textarea',
+    )
+  );
+  function sanitize_text( $input ) {
+    return wp_kses_post( $input );
+  }
+}
+add_action( 'customize_register', 'organisation_customizer' );
+

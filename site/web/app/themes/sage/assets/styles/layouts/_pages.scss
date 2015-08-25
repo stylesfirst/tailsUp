@@ -92,10 +92,13 @@
   border-left: 1px solid #a8b5bc;
   border-top: 1px solid #a8b5bc;
   border-bottom: 1px solid #a8b5bc;
-  padding: 40px;
+  padding: 20px;
   position: relative;
+  @media(min-width: 767px){
+    padding: 40px;
+  }
   &:hover{
-    border: 2px solid $brand-primary;
+    background: #f0f0f0;
   }
   &__image img{
     border-radius: 50%;
@@ -123,6 +126,9 @@
   }
   &__stats{
     text-transform: uppercase;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   &__state{
     font-size: 18px;

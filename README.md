@@ -37,3 +37,10 @@ A framework to create listings and handle applications for the adoption of rescu
   * `cd /srv/www/tailsup.org.au/current && composer require roots/soil`
   * `wp plugin activate soil`
 
+## Deployment
+* `cd ansible/`
+* `bash -x ./deploy.sh <environment> tailsup.org.au`
+
+## Environments
+* Dev - tailsup.dev
+* Production - tailsup.org.au
